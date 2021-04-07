@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded;
+}
+#menu-toggler + label .hamburger{
+  display: block;
+}
+#menu-toggler:checked + label .hamburger{
+  display: none;
+}
+#menu-toggler:checked + label .close{
+  display: block;
+}
+#menu-toggler + label .close{
+  display: none;
+}
+#menu-toggler:checked ~ div{
+  transform: translate(0%);
+  height: 100%;
+}
+.menubar{
+  height: 0%;
+  width:100%;
+  padding: 0 32px;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: 50;
+  overflow-y: auto;
+  transition: .3s ease-in-out;
+}
+.container{
+  max-height: calc(100vh - 12rem);
+  overflow-y: auto;
+}
+#product-toggler ~ ul, #company-toggler ~ ul, #connect-toggler ~ ul{
+  visibility: hidden;
+  height: 0;
+  transition: all .3s ease-in-out;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  list-style:none;
+  border-radius:8px;
+  background: rgb(200, 200, 203,.5);
+  opacity: 0;
+  margin-top: -50px;
+}
+#product-toggler:checked + label, #company-toggler:checked + label, #connect-toggler:checked + label{
+  transform: rotate(180deg)
+}
+#product-toggler:checked ~ ul, #company-toggler:checked ~ ul, #connect-toggler:checked ~ ul{
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  margin-top: 20px;
+  padding: 1.5rem;
+}
+#productDesktop-toggler ~ ul, #companyDesktop-toggler ~ ul, #connectDesktop-toggler ~ ul{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  transform: translateY(105%);
+  border-radius:8px;
+  background: white;
+  opacity: 0;
+  height: 0;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#productDesktop-toggler + label, #companyDesktop-toggler + label, #connectDesktop-toggler + label{
+  opacity: .60;
+}
+#productDesktop-toggler:checked + label > img, #companyDesktop-toggler:checked + label > img, #connectDesktop-toggler:checked + label > img{
+  transform: rotate(180deg);
+}
+#productDesktop-toggler:checked + label, #companyDesktop-toggler:checked + label, #connectDesktop-toggler:checked + label{
+  opacity: 1;
+}
+#productDesktop-toggler:checked ~ ul, #companyDesktop-toggler:checked ~ ul, #connectDesktop-toggler:checked ~ ul{
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  padding: 1.5rem;
+  height: auto;
+}
+@tailwind utilities;

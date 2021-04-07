@@ -1,0 +1,23 @@
+{
+  "name": "frontendmentor",
+  "version": "1.0.0",
+  "description": "![Design preview for the Blogr landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/tailwind.css -o main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelEver/frontendmentor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmanuelEver/frontendmentor/issues"
+  },
+  "homepage": "https://github.com/EmmanuelEver/frontendmentor#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "tailwindcss": "^2.0.4"
+  }
+}

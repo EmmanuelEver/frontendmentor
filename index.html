@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./main.css">
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <header
+    class="absolute z-20 w-full max-w-screen-2xl h-20 flex items-center justify-between mx-auto px-6 pt-6 md:px-16 lg:px-20 xl:px-36">
+    <nav class="nav h-full flex items-center">
+      <div class="nav-link h-10">
+        <img class="h-full object-contain" src="./images/logo.svg" alt="">
+      </div>
+      <div class="hidden  md:flex items-center ml-4">
+        <div
+          class="productDesktop mx-5 text-white flex text-lg font-medium items-center flex-wrap justify-center relative">
+          <input type="checkbox" id="productDesktop-toggler" class="hidden ">
+          <label class="items-center flex" for="productDesktop-toggler">Product<img class="ml-2"
+              src="./images/icon-arrow-light.svg"> </label>
+          <ul class="w-full">
+            <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+              Overview
+            </li>
+            <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+              Pricing
+            </li>
+            <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+              Marketplace
+            </li>
+            <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+              Features
+            </li>
+            <li class="text-base :hover:underline font-normal text-primary-300">
+              Integrations
+            </li>
+          </ul>
+        </div>
+        <div
+          class="companyDesktop mx-5 flex text-white text-lg font-medium items-center flex-wrap justify-center relative">
+          <input type="checkbox" id="companyDesktop-toggler" class="hidden ">
+          <label class="items-center flex" for="companyDesktop-toggler"> Company
+            <img class="ml-2" src="./images/icon-arrow-light.svg"> </label>
+          <ul class="w-full">
+            <li class="text-base font-normal text-primary-300 mb-1.5">
+              About
+            </li>
+            <li class="text-base font-normal text-primary-300 mb-1.5">
+              Team
+            </li>
+            <li class="text-base font-normal text-primary-300 mb-1.5">
+              Blogs
+            </li>
+            <li class="text-base font-normal text-primary-300">
+              Careers
+            </li>
+          </ul>
+        </div>
+        <div
+          class="connectDesktop  text-white mx-5 flex text-lg font-medium items-center flex-wrap justify-center relative">
+          <input type="checkbox" id="connectDesktop-toggler" class="hidden ">
+          <label class="flex items-center" for="connectDesktop-toggler">Connect <img class="ml-2"
+              src="./images/icon-arrow-light.svg"> </label>
+          <ul class="w-full">
+            <li class="text-base font-normal text-primary-300 mb-1.5">
+              Contact
+            </li>
+            <li class="text-base font-normal text-primary-300 mb-1.5">
+              Newsletter
+            </li>
+            <li class="text-base font-normal text-primary-300">
+              LinkedIn
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="actions h-full">
+      <div class=" items-center hidden h-full md:flex">
+        <button class="text-white font-bold font-primary px-3 mr-2 opacity-60 hover:opacity-100">Login</button>
+        <button
+          class="rounded-full hover:opacity-70 ml-2 hover:text-white hover:bg-primary-100 transition-colors md:w-28  lg:w-36 text-center md:py-3 lg:py-4 font-bold font-primary text-primary-200 bg-white">Sign
+          Up</button>
+      </div>
+      <div class="actions-menu h-full flex items-center md:hidden">
+        <input type="checkbox" id="menu-toggler" class="hidden ">
+        <label for="menu-toggler" class="w-6 h-4">
+          <svg class="w-8 h-5 hamburger" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#FFF" fill-rule="evenodd">
+              <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+            </g>
+          </svg>
+          <svg class="w-8 h-8 close" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z"
+              fill="#FFF" fill-rule="evenodd" />
+          </svg>
+        </label>
+        <!-- menubar -->
+        <div class="menubar ">
+          <div class="container w-full rounded-lg bg-white p-8 shadow-lg">
+            <div class="dropdown">
+              <div class="product flex text-lg font-medium items-center flex-wrap justify-center">
+                Product
+                <input type="checkbox" id="product-toggler" class="hidden ">
+                <label class="ml-2" for="product-toggler"><img src="./images/icon-arrow-dark.svg"> </label>
+                <ul class="w-full">
+                  <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+                    Overview
+                  </li>
+                  <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+                    Pricing
+                  </li>
+                  <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+                    Marketplace
+                  </li>
+                  <li class="text-base :hover:underline font-normal text-primary-300 mb-1.5">
+                    Features
+                  </li>
+                  <li class="text-base :hover:underline font-normal text-primary-300">
+                    Integrations
+                  </li>
+                </ul>
+              </div>
+              <div class="company mt-4 flex text-lg font-medium items-center flex-wrap justify-center">
+                Company
+                <input type="checkbox" id="company-toggler" class="hidden ">
+                <label class="ml-2" for="company-toggler"><img src="./images/icon-arrow-dark.svg"> </label>
+                <ul class="w-full">
+                  <li class="text-base font-normal text-primary-300 mb-1.5">
+                    About
+                  </li>
+                  <li class="text-base font-normal text-primary-300 mb-1.5">
+                    Team
+                  </li>
+                  <li class="text-base font-normal text-primary-300 mb-1.5">
+                    Blogs
+                  </li>
+                  <li class="text-base font-normal text-primary-300">
+                    Careers
+                  </li>
+                </ul>
+              </div>
+              <div class="connect mt-4 flex text-lg font-medium items-center flex-wrap justify-center">
+                Connect
+                <input type="checkbox" id="connect-toggler" class="hidden ">
+                <label class="ml-2" for="connect-toggler"><img src="./images/icon-arrow-dark.svg"> </label>
+                <ul class="w-full">
+                  <li class="text-base font-normal text-primary-300 mb-1.5">
+                    Contact
+                  </li>
+                  <li class="text-base font-normal text-primary-300 mb-1.5">
+                    Newsletter
+                  </li>
+                  <li class="text-base font-normal text-primary-300">
+                    LinkedIn
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-7 pt-7 border-t border-secondary-100 w-full flex flex-col items-center">
+                <h3 class="font-semibold font-secondary">
+                  Login
+                </h3>
+                <button class="bg-main py-3 px-8 rounded-full text-white font-bold mt-2">
+                  Sign Up
+                </button>
+              </div>
+
+            </div>
+            <!-- <div class="dropdown">
+              <h3>Company</h3>
+            </div>
+            <div class="dropdown">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero  bg-main w-full overflow-hidden" style="border-bottom-left-radius:5rem">
+      <div class="max-w-screen-2xl px-8 pb-32 pt-44 mx-auto overflow-hidden  relative">
+        <img src="./images/bg-pattern-intro.svg" alt="" style="height:1100px;"
+          class="absolute pointer-events-none object-cover z-0 -top-44 left-0 select-none">
+        <div class="w-full relative z-10">
+          <h1 class="text-3xl font-primary text-white leading-tight text-center md:text-4xl xl:text-6xl"> A modern
+            publishing platform </h1>
+          <p class="text-center font-secondary text-white mt-8 tracking-wider lg:text-xl"> Grow your audience and build
+            your online
+            brand </p>
+        </div>
+        <div class="flex items-center justify-center mt-8 relative">
+          <button
+            class="rounded-full mr-3 hover:opacity-70 hover:text-white hover:bg-primary-100 transition-colors  w-36 text-center py-4 font-bold font-primary text-primary-200 bg-white">
+            Start for Free
+          </button>
+          <button
+            class="rounded-full mr-3  border border-solid hover:text-primary-200 hover:bg-white transition-colors border-white w-36 text-center py-4 font-bold font-primary text-white bg-transparent">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-12 pb-72 md:py-16 lg:py-20 xl:py-28 overflow-hidden">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="section-header">
+          <h2 class="text-center text-primary-300 font-primary text-xl md:text-2xl lg:text-3xl xl:text-4xl"> Designed for the future </h2>
+        </div>
+        <div class="flex md:mt-16 flex-wrap md:flex-row-reverse md:flex-nowrap md:items-center">
+          <div class="w-full my-7 md:my-0 md:w-4/5 md:-mr-24">
+            <img class="w-full object-contain" src="./images/illustration-editor-mobile.svg" alt="">
+          </div>
+          <div class="w-full md:w-1/2 px-8 md:px-0 md:pl-8 lg:pl-20">
+            <article>
+              <header class="text-center text-primary-300 font-primary text-xl lg:text-2xl">
+                Introducing an extensible editor
+              </header>
+              <p class="text-base text-center text-secondary-300 opacity-60 mt-5 lg:text-lg">
+                Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </article>
+            <article class="mt-8">
+              <header class="text-center text-primary-300 font-primary text-xl lg:text-2xl">
+                Robust content management
+              </header>
+              <p class="text-base text-center text-secondary-300 opacity-60 mt-5 lg:text-lg">
+                Flexible content management enables users to easily move through posts. Increase the usability of your
+                blog
+                by adding customized categories, sections, format, or flow. With this functionality, you’re in full
+                control.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full  bg-sub md:px-16 lg:px-20 xl:px-28 lg:my-20" style="border-bottom-left-radius:5rem">
+      <div class="max-w-screen-2xl mx-auto ">
+        <div class="flex flex-wrap w-full relative md:justify-end" style="background-image: url(./images/bg-pattern-circles.svg); background-position: left top; background-size:cover; background-repeat: no-repeat;">
+          <div class="absolute z-20 top-0 left-1/2 w-full md:w-1/2 xl:w-2/6 md:-translate-x-full md:-translate-y-0 transform -translate-x-1/2 -translate-y-1/2 lg:-translate-y-14 ">
+            <img class="w-full object-contain h-full" src="./images/illustration-phones.svg" alt="">
+          </div>
+          <div class="w-full md:w-1/2 overflow-hidden pt-44 pb-14 px-8 relative md:py-10 lg:py-20 xl:py-28" >
+            <!-- <img src="./images/bg-pattern-circles.svg"
+              class=" object-cover absolute -top-1/4 md:-left-2/3 pointer-events-none select-none left-0 w-full " alt="">
+            <article class="mt-8 z-10 relative"> -->
+              <header class="text-center text-white font-primary text-xl">
+                State of the Art Infrastructure
+              </header>
+              <p class="text-base text-center text-white opacity-60 mt-5 font-secondary">
+                With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                connectivity.
+                This ensures your site will load instantly, no matter where your readers are, keeping your site
+                competitive.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-12 mt-12 md:py-16 lg:py-20 xl:py-28 overflow-hidden">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="flex flex-wrap items-center md:flex-nowrap">
+          <div class="w-full my-7 md:my-0 md:w-4/5 md:-ml-36 xl:w-5/5 xl:-ml-60">
+            <img class="w-full object-contain" src="./images/illustration-laptop-mobile.svg" alt="">
+          </div>
+          <div class="w-full md:w-1/2 px-8 md:px-0 md:pr-16 lg:pr-20 xl:pr-28">
+            <article>
+              <header class="text-center md:text-left text-primary-300 font-primary text-xl lg:text-2xl">
+                Free, open, simple
+              </header>
+              <p class="text-base text-center md:text-left text-secondary-300 opacity-60 mt-5 lg:text-lg">
+                Blogr is a free and open source application backed by a large community of helpful developers. It
+                supports
+                features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+                tools,
+                and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+              </p>
+            </article>
+            <article class="mt-8">
+              <header class="text-center md:text-left text-primary-300 font-primary text-xl lg:text-2xl">
+                Powerful tooling
+              </header>
+              <p class="text-base text-center md:text-left text-secondary-300 opacity-60 mt-5 lg:text-lg">
+                Batteries included. We built a simple and straightforward CLI tool that makes customization and
+                deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="w-full py-14 bg-secondary-300 md:px-16 lg:px-20 xl:px-28" style="border-top-right-radius:5rem">
+    <div class="max-w-screen-2xl mx-auto">
+      <div class="w-full flex flex-wrap md:justify-around">
+        <div class="w-full md:w-1/4 ">
+          <img class="w-16 object-contain mx-auto md:w-24" src="./images/logo.svg" alt="">
+        </div>
+        <div class="w-full md:w-1/4 mt-10 md:mt-0">
+          <h3 class="text-white text-center md:text-left text-sm font-medium font-secondary">Product</h3>
+          <ul class="list-none flex flex-col items-center mt-4 md:items-start md:mt-4">
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Overview</li>
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Pricing</li>
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Marketplace</li>
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Features</li>
+            <li class="text-sm font-secondary text-secondary-100">Integrations</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 mt-6 md:mt-0">
+          <h3 class="text-white text-center md:text-left text-sm font-medium font-secondary">Company</h3>
+          <ul class="list-none flex flex-col items-center mt-4 md:items-start md:mt-4">
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">About</li>
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Team</li>
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Blog</li>
+            <li class="text-sm font-secondary text-secondary-100">Careers</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 mt-6 md:mt-0">
+          <h3 class="text-white text-center md:text-left text-sm font-medium font-secondary">Connect</h3>
+          <ul class="list-none flex flex-col items-center mt-4 md:items-start md:mt-4">
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Contact</li>
+            <li class="text-sm mb-1.5 font-secondary text-secondary-100">Newsletter</li>
+            <li class="text-sm font-secondary text-secondary-100">LinkedIn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Product
+
+
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+
+  Contact
+  Newsletter
+  LinkedIn
+  
+  Login
+  Sign Up
+
+
+
+  State of the Art Infrastructure
+  
+  Free, open, simple
+ 
+
+
+  Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+  
+  Contact
+  Newsletter
+  LinkedIn -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
